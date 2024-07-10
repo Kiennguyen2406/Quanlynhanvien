@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class RepairAndDelete {
     public void repair(Scanner scanner, OfficerManager officerManager)  {
-        System.out.print("Nhập mã code cán bộ cần sửa :");
+        System.out.print("Nhập mã code cán bộ :");
         String officerCode = scanner.nextLine();
         Menu.menuRepairYesOrNo();
         String choose = scanner.nextLine();
@@ -37,7 +37,7 @@ public class RepairAndDelete {
         }
     }
     public void delete(Scanner scanner, OfficerManager officerManager) {
-        System.out.print("Nhập mã code cán bộ cần sửa :");
+        System.out.print("Nhập mã code cán bộ  :");
         String officerCode = scanner.nextLine();
         Menu.menuRepairYesOrNo();
         String choose = scanner.nextLine();
