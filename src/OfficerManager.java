@@ -23,8 +23,12 @@ public class OfficerManager implements InterOfficer {
 
 
     public void addOfficer(Officer officer) {
-        officers.add(officer);
-        savetoFile();
+        if(searchOfficeByCode(officer.getOfficerCode()) != -1) {
+            System.out.println("Mã cán bộ đã tồn tại, không thể thêm mới.");
+        }else {
+            officers.add(officer);
+            savetoFile();
+        }
     }
 
     @Override
@@ -48,7 +52,7 @@ public class OfficerManager implements InterOfficer {
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                String[] parts = line.split(","); // Giả sử mỗi thuộc tính của Officer được phân tách bằng dấu phẩy
+                String[] parts = line.split(",");
 
                 if (parts.length < 8) {
                     System.err.println("Dữ liệu không hợp lệ: " + line);

@@ -1,3 +1,5 @@
+package Menu;
+
 public class MenuCustomer {
     public static void menuSelect() {
         System.out.println("Quản lý cán bộ");
