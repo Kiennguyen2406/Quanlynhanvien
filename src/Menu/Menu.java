@@ -7,7 +7,7 @@ public class Menu {
         System.out.println("1,Thêm mới cán bộ.");
         System.out.println("2,Sửa cán bộ");
         System.out.println("3,Xóa cán bộ");
-        System.out.println("4,Tìm kiếm theo mã từng cán bộ.");
+        System.out.println("4,Tìm kiếm theo tên cán bộ.");
         System.out.println("5,Hiển thị thông tin về danh sách các cán bộ.");
         System.out.println("6,Tính lương đi công tác");
         System.out.println("7,Hiển thị lương cũng như tổng lương đã kiếm được ");
