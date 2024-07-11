@@ -10,7 +10,7 @@ public class Menu {
         System.out.println("4,Tìm kiếm theo tên cán bộ.");
         System.out.println("5,Hiển thị thông tin về danh sách các cán bộ.");
         System.out.println("6,Tính lương đi công tác");
-        System.out.println("7,Hiển thị lương cũng như tổng lương đã kiếm được ");
+        System.out.println("7, Hiển thị tất cả lương công tác ");
         System.out.println("8,Thoát khỏi chương trình.");
         System.out.println("Chọn chức năng");
     }

@@ -2,6 +2,8 @@ import Officer.Officer;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import Officer.*;
@@ -27,6 +29,7 @@ public class OfficerManager implements InterOfficer {
             System.out.println("Mã cán bộ đã tồn tại, không thể thêm mới.");
         }else {
             officers.add(officer);
+            sortByNumber();
             savetoFile();
         }
     }
@@ -55,7 +58,6 @@ public class OfficerManager implements InterOfficer {
                 String[] parts = line.split(",");
 
                 if (parts.length < 8) {
-                    System.err.println("Dữ liệu không hợp lệ: " + line);
                     continue;
                 }
 
@@ -171,7 +173,10 @@ public class OfficerManager implements InterOfficer {
                 System.out.println("Hiển thị thông tin tìm kiếm là ");
                 System.out.println(officer.toString());
             }
+            System.out.println("Khong tim thay ten trong danh sach");
+            break;
         }
+
     }
 
     public void calculateSalaryForBusinessTripsByName(String name, int day) throws IllegalArgumentException {
@@ -239,5 +244,15 @@ public class OfficerManager implements InterOfficer {
             System.err.println("Error loading work salaries from file: " + e.getMessage());
         }
     }
+    public void sortByNumber() {
+        Collections.sort(officers, new Comparator<Officer>() {
+            @Override
+            public int compare(Officer o1, Officer o2) {
+                return Integer.compare(o1.getNumber(), o2.getNumber());
+            }
+        });
+        System.out.println("Danh sách đã được sắp xếp theo số thứ tự.");
+    }
 }
+
 

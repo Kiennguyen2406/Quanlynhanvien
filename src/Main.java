@@ -32,7 +32,6 @@ public class Main {
                     System.out.println("Điền tên cần tìm");
                     String name = scanner.nextLine();
                     officerManager.searchOfficeByName(name);
-                    System.out.println(" ");
                     break;
                 case 5:
                     officerManager.showOfficer();
